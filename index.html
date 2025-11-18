@@ -64,35 +64,36 @@ src="https://www.facebook.com/tr?id=334039202718600&ev=PageView&noscript=1"
     }
 
     /* LOGO */
-    .logo{
-      width:260px;
-      height:120px;
-      margin:0 auto 22px;
-      border-radius:14px;
-      background:#000;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:0 0 32px rgba(0,255,120,0.35);
-      border-bottom:3px solid var(--accent);
-      overflow:hidden;
-      position:relative;
-    }
-    .logo::after{
-      content:"";
-      position:absolute;
-      bottom:-1px;
-      left:0;
-      right:0;
-      height:3px;
-      background:linear-gradient(90deg,var(--accent),#ffffff,var(--accent));
-      opacity:.65;
-    }
-    .logo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
+.logo{
+  width:260px;
+  height:90px;  /* antes 120px – ahora más bajo */
+  margin:0 auto 22px;
+  border-radius:14px;
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 32px rgba(0,255,120,0.35);
+  border-bottom:3px solid var(--accent);
+  overflow:hidden;  /* RECORTE ACTIVO */
+  position:relative;
+}
+.logo::after{
+  content:"";
+  position:absolute;
+  bottom:-1px;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--accent),#ffffff,var(--accent));
+  opacity:.65;
+}
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;  
+  object-position:center -25px; /* 🔥 RECORTA LA PARTE SUPERIOR */
+}
 
     h1{
       font-size:22px;
